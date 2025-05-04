@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { GraduationCap } from 'lucide-react';
-import CreateStudyPlanWizard from '@/components/dashboard/student/academic/CreateStudyPlanWizard';
+import { CreateStudyPlanWizard } from '@/components/dashboard/student/academic/CreateStudyPlanWizard';
 import StudyPlanDetail from '@/components/dashboard/student/academic/StudyPlanDetail';
 import StudyPlanSections from '@/components/dashboard/student/academic/components/StudyPlanSections';
 import { useAcademicPlans } from '@/components/dashboard/student/academic/hooks/useAcademicPlans';
