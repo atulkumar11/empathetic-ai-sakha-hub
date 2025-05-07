@@ -1,0 +1,88 @@
+
+@keyframes pulse-subtle {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 2s ease-in-out infinite;
+}
+
+.avatar-pulse {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: rgba(59, 130, 246, 0.2); /* blue */
+  z-index: 0;
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.3;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+.gradient-text {
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(to right, #3b82f6, #8b5cf6);
+}
+
+/* Colors for Sakha AI */
+:root {
+  --sakha-blue: #3b82f6;
+  --sakha-purple: #8b5cf6;
+  --sakha-light-blue: #93c5fd;
+  --sakha-lavender: #c4b5fd;
+  
+  /* Gradient Color Variables for Methodology Section */
+  --blue-500: #3b82f6;
+  --cyan-400: #22d3ee;
+  --purple-500: #8b5cf6;
+  --violet-400: #a78bfa;
+  --green-500: #22c55e;
+  --teal-400: #2dd4bf;
+  --orange-500: #f97316;
+  --amber-400: #fbbf24;
+  --pink-500: #ec4899;
+  --rose-400: #fb7185;
+  --indigo-500: #6366f1;
+  --blue-400: #60a5fa;
+  --red-500: #ef4444;
+  --orange-400: #fb923c;
+}
+
+/* Engine Animation */
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.rotate-slow {
+  animation: rotate 30s linear infinite;
+}
+
+.rotate-medium {
+  animation: rotate 20s linear infinite;
+}
+
+.rotate-fast {
+  animation: rotate 10s linear infinite reverse;
+}

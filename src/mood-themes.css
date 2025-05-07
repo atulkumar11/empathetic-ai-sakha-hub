@@ -1,0 +1,143 @@
+
+/* Base styling */
+body {
+  font-size: 14px !important; /* Reduced from 16px to 14px */
+  line-height: 1.5;
+  transition: background-color 0.3s ease;
+  text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+/* Mood-specific themes */
+.mood-happy {
+  --mood-primary: rgba(255, 220, 100, 0.1);
+  --mood-accent: rgba(255, 230, 130, 0.15);
+  --mood-text: #222;
+}
+
+.mood-sad {
+  --mood-primary: rgba(100, 150, 200, 0.1);
+  --mood-accent: rgba(120, 170, 220, 0.15);
+  --mood-text: #333;
+}
+
+.mood-stressed {
+  --mood-primary: rgba(255, 160, 130, 0.1);
+  --mood-accent: rgba(255, 180, 150, 0.15);
+  --mood-text: #333;
+}
+
+.mood-relaxed {
+  --mood-primary: rgba(170, 220, 200, 0.1);
+  --mood-accent: rgba(190, 240, 220, 0.15);
+  --mood-text: #222;
+}
+
+.mood-focused {
+  --mood-primary: rgba(180, 160, 240, 0.1);
+  --mood-accent: rgba(200, 180, 255, 0.15);
+  --mood-text: #222;
+}
+
+.mood-motivated {
+  --mood-primary: rgba(255, 180, 100, 0.1);
+  --mood-accent: rgba(255, 200, 120, 0.15);
+  --mood-text: #222;
+}
+
+.mood-overwhelmed {
+  --mood-primary: rgba(220, 150, 180, 0.1);
+  --mood-accent: rgba(240, 170, 200, 0.15);
+  --mood-text: #333;
+}
+
+.mood-tired {
+  --mood-primary: rgba(180, 190, 200, 0.1);
+  --mood-accent: rgba(200, 210, 220, 0.15);
+  --mood-text: #444;
+}
+
+.mood-curious {
+  --mood-primary: rgba(180, 220, 255, 0.1);
+  --mood-accent: rgba(200, 240, 255, 0.15);
+  --mood-text: #222;
+}
+
+.mood-okay, .mood-neutral {
+  --mood-primary: rgba(200, 200, 200, 0.1);
+  --mood-accent: rgba(220, 220, 220, 0.15);
+  --mood-text: #333;
+}
+
+/* Apply mood tinting */
+.mood-happy, .mood-sad, .mood-stressed, 
+.mood-relaxed, .mood-focused, .mood-motivated,
+.mood-overwhelmed, .mood-tired, .mood-curious,
+.mood-okay, .mood-neutral, .mood-anxious, 
+.mood-confused, .mood-calm {
+  background-color: var(--mood-primary);
+}
+
+/* Adjustments for dark mode */
+.dark .mood-happy, .dark .mood-sad, .dark .mood-stressed, 
+.dark .mood-relaxed, .dark .mood-focused, .dark .mood-motivated,
+.dark .mood-overwhelmed, .dark .mood-tired, .dark .mood-curious,
+.dark .mood-okay, .dark .mood-neutral, .dark .mood-anxious, 
+.dark .mood-confused, .dark .mood-calm {
+  --mood-text: #eee;
+  background-color: transparent;
+}
+
+/* Fix font size consistency */
+button, input, select, textarea {
+  font-size: 14px !important; /* Reduced from 16px to 14px */
+  font-family: inherit;
+}
+
+/* Fix mobile zoom issues */
+@media screen and (max-width: 768px) {
+  input, select, textarea {
+    font-size: 16px !important; /* Keep 16px for mobile to prevent auto-zoom */
+  }
+}
+
+/* Additional controls for better text rendering */
+* {
+  max-height: 1000000px; /* Fix for font boosting */
+}
+
+/* Fix for form elements */
+input[type="text"], input[type="email"], input[type="password"], 
+textarea, select {
+  font-size: 14px !important; /* Reduced from 16px to 14px */
+  transform: scale(1);
+}
+
+/* Scale adjustments for different screen sizes */
+@media screen and (min-width: 1440px) {
+  html, body {
+    font-size: 14px !important; /* Reduced from 16px to 14px */
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  html, body {
+    font-size: 14px !important; /* Reduced from 16px to 14px */
+  }
+}
+
+/* Fix for zoom reset */
+@viewport {
+  zoom: 1.0;
+  min-zoom: 1.0;
+  max-zoom: 1.0;
+  user-zoom: fixed;
+  width: device-width;
+}
+
+/* Font size overrides for specific elements */
+h1, h2, h3, h4, h5, h6, p, li, a, span, div {
+  font-size: revert; /* Use the cascading size rather than fixed values */
+}
