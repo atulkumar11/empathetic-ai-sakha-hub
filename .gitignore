@@ -1,3 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.log
+
+# Envs
+venv/
+env/
+.venv/
+
+# IDEs
+.vscode/
+.idea/
+
+# Others
+*.db
+*.sqlite3
+*.bak
+migrations/
 # Logs
 logs
 *.log
